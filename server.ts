@@ -4,7 +4,11 @@ import depthLimit from 'graphql-depth-limit';
 import { createServer } from 'http';
 import compression from 'compression';
 import cors from 'cors';
+import * as dotenv from 'dotenv';
 import schema from './src/schema';
+
+dotenv.config();
+
 const app = express();
 
 const server = new ApolloServer({

@@ -1,3 +1,19 @@
 type Query {
-  helloWorld: String
+  calculatePrice(data: CalulatePriceInput): BitcoinPriceinNaira!
+}
+
+
+type BitcoinPriceinNaira { 
+nairaEquivalent: String
+}
+
+input CalulatePriceInput {
+margin: Float!
+exchangeRate: Int!
+transaction:  Transaction!
+}
+
+enum Transaction {
+  BUY
+  SELL
 }
