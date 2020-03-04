@@ -29,4 +29,3 @@ Please describe the tests that you ran to verify your changes.
 ## Screenshots (if applicable)
 
 Please attach screenshots if applicable
-
