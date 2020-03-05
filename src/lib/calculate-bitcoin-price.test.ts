@@ -8,12 +8,12 @@ describe('#Calculate Bitcoin Price', () => {
     })
 
     it('should subtract percentageMarginValue from currentBitcoinPric and convert to naira when SELL is passed  ', () => {
-        const nairaEquivalent = BitcoinConversion.calculateBitcoinPrice('SELL', 0.2, 360, 360);
-        expect(nairaEquivalent).toBe(129599);
+        const nairaEquivalentData = BitcoinConversion.calculateBitcoinPrice('SELL', 0.2, 360, 360);
+        expect(nairaEquivalentData).toBe(129599);
     })
 
     it('Return N/A when invalid enum is passed for type ', () => {
-        const nairaEquivalent = BitcoinConversion.calculateBitcoinPrice('TEST', 0.2, 360, 360);
-        expect(nairaEquivalent).toBe("NA");
+        const nairaEquivalentResponse = BitcoinConversion.calculateBitcoinPrice('TEST', 0.2, 360, 360);
+        expect(nairaEquivalentResponse).toBe("NA");
     })
 });
