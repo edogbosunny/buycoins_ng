@@ -1,4 +1,5 @@
 import 'cross-fetch/polyfill'
+
 import resolverMap from './resolver-map';
 
 
