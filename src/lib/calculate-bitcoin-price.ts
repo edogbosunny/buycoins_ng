@@ -4,14 +4,13 @@ export class BitcoinConversion {
         exchangeRate: number,
         currentBitcoinPrice: number) {
 
-        const percentageMarginValue = margin * 100
+        const percentageMarginValue = margin / 100;
 
-        if (type === 'BUY') {
-            // evaluate and convert to Naira using the exchange rate
-            return Math.round((percentageMarginValue + currentBitcoinPrice) * exchangeRate);
-
-        } else {
-            return Math.round((percentageMarginValue - currentBitcoinPrice) * exchangeRate);
+        const typeMap: any = {
+            'BUY': Math.round((percentageMarginValue + currentBitcoinPrice) * exchangeRate),
+            'SELL': Math.round((currentBitcoinPrice - percentageMarginValue) * exchangeRate),
         }
+
+        return typeMap[type] ? typeMap[type] : 'NA';
     }
 }
