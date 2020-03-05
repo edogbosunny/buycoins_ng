@@ -10,7 +10,7 @@ nairaEquivalent: String
 input CalulatePriceInput {
 margin: Float!
 exchangeRate: Int!
-transaction:  Transaction!
+type:  Transaction!
 }
 
 enum Transaction {
