@@ -16,3 +16,13 @@ please see example of graphql payload needed to be passed below
 }
 ```
 the margin and exchange rate parameters are float values while the type is an ENUM which can only take BUY or SELL as parameters
+
+a hosted playground can be found [HERE](https://buy-coins-assessment.herokuapp.com/graphql)
+
+#### how to run this application
+
+```
+- clone the repository
+- run yarn in command prompt
+- run yarn run start:dev
+```
