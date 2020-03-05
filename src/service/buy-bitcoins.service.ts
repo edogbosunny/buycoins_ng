@@ -1,6 +1,6 @@
 import axiosInstance from '../config/http';
 
-export default class BIitcoinService {
+export default class BitcoinService {
     static async getCurrentBitcoinPrice() {
         try {
             const serverResponse = await axiosInstance.get('/currentprice.json')

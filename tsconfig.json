@@ -62,12 +62,15 @@
 
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */,
-    "sourceMap": true,
+    // "sourceMap": true,
   },
-  "collectCoverageFrom": [
-    "**/src/**"
-  ],
-  // "include": ["src/**/*"],
-  "include": ["**/src**"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  // "collectCoverageFrom": [
+  //   "**/src/**"
+  // ],
+  // // "include": ["src/**/*"],
+  // "include": ["**/src**"],
+  // "exclude": ["node_modules", "**/*.spec.ts"],
+  //   "globalSetup": "./src/config/setup.ts",
+  //   "globalTeardown": "./src/config/tear-down.ts"
+
 }

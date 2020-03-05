@@ -14,7 +14,6 @@ describe('#Calculate Bitcoin Price', () => {
 
     it('Return N/A when invalid enum is passed for type ', () => {
         const nairaEquivalent = BitcoinConversion.calculateBitcoinPrice('TEST', 0.2, 360, 360);
-        console.log('nairaEquivalent', nairaEquivalent)
         expect(nairaEquivalent).toBe("NA");
     })
 });
