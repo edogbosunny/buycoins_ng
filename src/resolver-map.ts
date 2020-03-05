@@ -1,4 +1,5 @@
 import { IResolvers } from 'graphql-tools';
+
 import service from './service/buy-bitcoins.service';
 import { BitcoinConversion } from './lib/calculate-bitcoin-price';
 
