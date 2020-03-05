@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 
-const server = new ApolloServer({
+const server = new ApolloServer ({
   schema,
   validationRules: [depthLimit(7)],
 });
@@ -20,4 +20,10 @@ app.use('*', cors());
 app.use(compression());
 server.applyMiddleware({ app, path: '/graphql' });
 
-export default createServer(app);
+const httpServer = createServer(app);
+// httpServer.listen({ port: process.env.PORT || 4000 }).then(({ url }: any) => {
+//   console.log(`🚀 Server ready at ${url}`);
+// });
+httpServer.listen(
+    { port: process.env.PORT || 4000},
+    (): void => console.log(`GraphQL is now running`));
