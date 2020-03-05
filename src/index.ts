@@ -1,4 +1,4 @@
-import  httpServer  from './src/server';
+import  httpServer  from './server';
 
 httpServer.listen(
     { port: 3000 },

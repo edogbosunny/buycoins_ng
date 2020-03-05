@@ -8,9 +8,9 @@
   "scripts": {
     "start": "node 'dist/index.js'",
     "test": "jest --coverage ",
-    "build": "tsc -p . && ncp src/schema dist/schema",
+    "build": "tsc -p . && ncp src/ dist/src",
     "start:dev": "npm run build:dev",
-    "build:dev": "nodemon 'index.ts' --exec 'ts-node' index.ts -e ts,graphql"
+    "build:dev": "nodemon 'src/index.ts' --exec 'ts-node' src/index.ts -e ts,graphql"
   },
   "dependencies": {
     "@babel/register": "^7.8.6",
@@ -30,6 +30,7 @@
     "graphql": "^14.6.0",
     "http": "^0.0.0",
     "jest": "^25.1.0",
+    "ncp": "^2.0.0",
     "ts-jest": "^25.2.1",
     "yarn": "^1.22.0"
   },
